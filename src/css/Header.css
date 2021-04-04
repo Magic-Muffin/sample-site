@@ -1,12 +1,14 @@
 .header-bar {
-    background-color: darkblue;
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    color: antiquewhite;
+    text-decoration: none;
 }
 
-.header-nav {
+/* .header-nav {
     background-color: red;
 }
 
 .header-user {
     background-color: yellow;
-}
+} */
 

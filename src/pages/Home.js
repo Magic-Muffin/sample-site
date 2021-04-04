@@ -1,8 +1,10 @@
+import Content from '../components/Content';
+
 const Home = (props) =>{
     return(
-        <dir>
+        <Content>
             <h1>Home</h1>
-        </dir>
+        </Content>
     );
 }
 
