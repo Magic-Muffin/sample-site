@@ -1,8 +1,10 @@
+import Content from "../components/Content";
+
 const Blog = (props) =>{
     return(
-        <dir>
+        <Content>
             <h1>Blog</h1>
-        </dir>
+        </Content>
     );
 }
 

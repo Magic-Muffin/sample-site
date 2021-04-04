@@ -1,8 +1,10 @@
+import Content from "../components/Content";
+
 const Forum = (props) =>{
     return(
-        <dir>
+        <Content>
             <h1>Forum</h1>
-        </dir>
+        </Content>
     );
 }
 

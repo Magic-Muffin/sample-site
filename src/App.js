@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 import './css/App.css';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import Home from './pages/Home';
 import Blog from './pages/Blog';
 import Forum from './pages/Forum';
@@ -38,6 +39,7 @@ function App() {
           <Login/>
         </Route>
       </Switch>
+      <Footer></Footer>
     </Router>
   );
 }

@@ -1,4 +1,5 @@
 import {useEffect} from 'react';
+import Content from '../components/Content';
 
 const Showcase = (props) =>{
 
@@ -16,10 +17,10 @@ const Showcase = (props) =>{
       }, []);
 
     return(
-        <dir>
+        <Content>
             <h1>Showcase</h1>
             <canvas id="webgl"></canvas>
-        </dir>
+        </Content>
     );
 }
 

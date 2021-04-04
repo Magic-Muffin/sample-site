@@ -1,8 +1,10 @@
+import Content from '../components/Content';
+
 const Login = (props) =>{
     return(
-        <dir>
+        <Content>
             <h1>Login</h1>
-        </dir>
+        </Content>
     );
 }
 

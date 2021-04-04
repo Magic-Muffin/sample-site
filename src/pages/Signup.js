@@ -1,8 +1,10 @@
+import Content from "../components/Content";
+
 const Signup = (props) =>{
     return(
-        <dir>
+        <Content>
             <h1>Signup</h1>
-        </dir>
+        </Content>
     );
 }
 
