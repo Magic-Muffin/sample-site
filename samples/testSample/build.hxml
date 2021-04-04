@@ -1,0 +1,7 @@
+-lib heaps
+-cp src
+-main Main
+-D analyzer-optimize
+-dce no
+-debug
+--js bin/main.js
