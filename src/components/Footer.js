@@ -5,7 +5,9 @@ const Footer = (props)=>{
     return(
         <div className={"footer"}>
             <ul>
-                <li>Footer</li>
+                <li>MIT</li>
+                <li>2021</li>
+                <li>Website</li>
             </ul>
         </div>
     );

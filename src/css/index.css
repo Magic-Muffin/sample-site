@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url('../background.jpg') no-repeat top center fixed;
+  background: #1e1e1e url('../images/background.jpg') no-repeat top center fixed;
   height: 100%;
   background-size: auto auto;
   /* filter: blur(3px); */
