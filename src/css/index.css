@@ -8,6 +8,9 @@ body {
   background-repeat: no-repeat;
   background-image: url('../background.jpg');
   background-position: top;
+  background-size: cover;
+  /* filter: blur(3px); */
+  z-index: -1;
 }
 
 code {
