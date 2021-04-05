@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 import './css/App.css';
+import React from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -8,6 +9,7 @@ import Forum from './pages/Forum';
 import Showcase from './pages/Showcase';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
+
 
 import {
   BrowserRouter as Router,
