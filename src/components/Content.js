@@ -3,7 +3,9 @@ import '../css/Content.css';
 
 const Content = (props)=>{
     return(
-        <div className={"content"}>{props.children}</div>
+        <div className={"content"}>
+            {props.children}
+        </div>
     );
 }
 

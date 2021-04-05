@@ -1,6 +1,9 @@
 .header-bar {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
     margin: 0;
-    min-height: 10vh;
+    min-height: 5vh;
     background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
     color: antiquewhite;
     display: flex;
@@ -28,6 +31,12 @@
 }
 
 .header-bar a {
-    color: black;
+    text-decoration: none;
+    color: #fffb09;
+}
+
+.header-bar a:hover {
+    text-decoration: underline;
+    color: #fafafa;
 }
 
