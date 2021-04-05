@@ -1,11 +1,10 @@
 import React from "react";
-import Content from "../components/Content";
 
 const Forum = (props) =>{
     return(
-        <Content>
+        <div>
             <h1>Forum</h1>
-        </Content>
+        </div>
     );
 }
 

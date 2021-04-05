@@ -3,6 +3,7 @@ import './css/App.css';
 import React from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Content from './components/Content';
 import Home from './pages/Home';
 import Blog from './pages/Blog';
 import Forum from './pages/Forum';
@@ -21,26 +22,28 @@ function App() {
   return (
     <Router>
       <Header/>
-      <Switch>
-        <Route exact path="/">
-          <Home/>
-        </Route>
-        <Route path="/blog">
-          <Blog/>
-        </Route>
-        <Route path="/forum">
-          <Forum/>
-        </Route>
-        <Route path="/showcase">
-          <Showcase/>
-        </Route>
-        <Route path="/signup">
-          <Signup/>
-        </Route>
-        <Route path="/login">
-          <Login/>
-        </Route>
-      </Switch>
+      <Content>
+        <Switch>
+          <Route exact path="/">
+            <Home/>
+          </Route>
+          <Route path="/blog">
+            <Blog/>
+          </Route>
+          <Route path="/forum">
+            <Forum/>
+          </Route>
+          <Route path="/showcase">
+            <Showcase/>
+          </Route>
+          <Route path="/signup">
+            <Signup/>
+          </Route>
+          <Route path="/login">
+            <Login/>
+          </Route>
+        </Switch>
+      </Content>
       <Footer></Footer>
     </Router>
   );

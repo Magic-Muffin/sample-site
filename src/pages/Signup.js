@@ -1,11 +1,10 @@
 import React from "react";
-import Content from "../components/Content";
 
 const Signup = (props) =>{
     return(
-        <Content>
+        <div>
             <h1>Signup</h1>
-        </Content>
+        </div>
     );
 }
 
