@@ -5,11 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-repeat: no-repeat;
-  background-color: #1e1e1e;
-  background-image: url('../background.jpg');
+  background: url('../background.jpg') no-repeat bottom left fixed;
+  background-size: 100% auto;
   background-position: top;
-  background-size: cover;
   /* filter: blur(3px); */
   z-index: -1;
 }
