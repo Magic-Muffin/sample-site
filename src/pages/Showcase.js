@@ -1,25 +1,17 @@
-import React, {useEffect} from 'react';
+import React from 'react';
+import ShowcaseSingle from '../components/ShowcaseSingle';
+
+// const samples  = [
+//   {
+//     title: "Spinning square",
+//     src: "./samples/main.js"
+//   }
+// ]
+
 
 const Showcase = (props) =>{
-
-    useEffect(() => {
-        const script = document.createElement('script');
-      
-        script.src = "./samples/main.js";
-        script.async = true;
-      
-        document.body.appendChild(script);
-      
-        return () => {
-          document.body.removeChild(script);
-        }
-      }, []);
-
     return(
-        <div>
-            <h1>Showcase</h1>
-            <canvas id="webgl"></canvas>
-        </div>
+      <ShowcaseSingle title={"Spinning Square"} src={"./samples/main.js"}></ShowcaseSingle>
     );
 }
 
