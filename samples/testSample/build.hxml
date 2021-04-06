@@ -2,6 +2,5 @@
 -cp src
 -main Main
 -D analyzer-optimize
--dce no
--debug
---js bin/main.js
+-dce full
+--js bin/SpinningSquare.js

@@ -1,4 +1,5 @@
 import React, {useEffect} from "react";
+import '../css/App.css';
 
 const ShowcaseSingle = (props)=>{
     useEffect(() => {
@@ -15,9 +16,13 @@ const ShowcaseSingle = (props)=>{
       }, []);
 
     return(
-        <div>
+        <div className={"showcase-single"}>
             <h1>{props.title}</h1>
             <canvas id="webgl"></canvas>
+            <div>
+              <a>Source</a>
+            </div>
+            <text id={"description"}>{props.description}</text>
         </div>
     );
 }
