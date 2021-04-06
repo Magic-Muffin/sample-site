@@ -1,0 +1,7 @@
+-lib hlsdl
+-lib heaps
+-cp src
+-main Main
+-D analyzer-optimize
+-dce full
+--hl bin/SpinningSquare.hl
