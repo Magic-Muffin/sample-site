@@ -1,9 +1,11 @@
-# Haxe project
+# Haxe Samples project
 
-This is an example Haxe project scaffolded by Visual Studio Code.
+These samples were built with Haxe version `4.1.1` and with `git` version of `heaps`.
 
-Without further changes the structure is following:
+The samples are to be built into JavaScript format and moved under the `public/samples/` folder. Any resource should be embedded into the `.js` file.
 
- * `src/Main.hx`: Entry point Haxe source file
- * `build.hxml`: Haxe command line file used to build the project
- * `README.md`: This file
+## TODO
+
+[ ] More samples.
+
+[ ] Build all samples from one `.hxml` file.
