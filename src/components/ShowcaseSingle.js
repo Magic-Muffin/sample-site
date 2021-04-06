@@ -13,14 +13,14 @@ const ShowcaseSingle = (props)=>{
         return () => {
           document.body.removeChild(script);
         }
-      }, []);
+      }, [props.src]);
 
     return(
         <div className={"showcase-single"}>
             <h1>{props.title}</h1>
             <canvas id="webgl"></canvas>
             <div>
-              <a>Source</a>
+              <button>Source</button>
             </div>
             <text id={"description"}>{props.description}</text>
         </div>

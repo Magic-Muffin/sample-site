@@ -1,7 +1,7 @@
-import React, {useState, useEffect} from "react";
+import React, {useEffect} from "react";
 import '../css/App.css';
 
-const data  = [
+const samples  = [
   {
     id: 0,
     title: "Spinning square",
@@ -20,7 +20,7 @@ const data  = [
 
 const ShowcaseList = (props)=>{
 
-    const [samples, setSamples] = useState(data);
+    // const [samples, setSamples] = useState(data);
 
     useEffect(() => {
         
@@ -29,9 +29,9 @@ const ShowcaseList = (props)=>{
     return(
         <div className={"showcase-list"}>
             {samples.map(sample=>
-                <div key={sample.id} to={`/showcase/${sample.id}`}>
+                <div key={sample.id}>
                     <h2>{sample.title}</h2>
-                    <img src={sample.screenshot} width={600}></img>
+                    <img src={sample.screenshot} alt={sample.title} width={600}></img>
                 </div>
             )}
         </div>

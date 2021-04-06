@@ -17,7 +17,6 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import ShowcaseSingle from './components/ShowcaseSingle';
 
 function App() {
   return (
