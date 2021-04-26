@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import './css/App.css';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Content from './components/Content';
@@ -15,13 +15,24 @@ import Login from './pages/Login';
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  Redirect
 } from "react-router-dom";
 
 function App() {
+  const [token, setToken] = useState(null);
+  useEffect(()=>{
+    let tk = localStorage.getItem("token")
+    setToken(tk);
+  },[token])
+
+  const loggedIn = ()=>{
+    return token === "123";
+  }
+
   return (
     <Router>
-      <Header/>
+      <Header loggedIn={loggedIn()}/>
       <Content>
         <Switch>
           <Route exact path="/">
@@ -42,6 +53,7 @@ function App() {
           <Route path="/login">
             <Login/>
           </Route>
+          <Redirect from='/logout' to="/" />
         </Switch>
       </Content>
       <Footer></Footer>

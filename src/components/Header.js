@@ -2,7 +2,33 @@ import React from "react";
 import {Link} from 'react-router-dom';
 import '../css/Header.css';
 
-const Header = (props) =>{
+const Header = ({loggedIn}) =>{
+
+    const logout =() => {
+        localStorage.setItem("token", "");
+    }
+
+    const userSection = () =>{
+        if(loggedIn){
+            return(
+                <li>
+                    <Link to="/logout" onClick={logout}>Logout</Link>
+                </li>
+            );
+            
+        }
+        return (
+            <>
+                <li>
+                    <Link to="/signup">Sign Up</Link>
+                </li>
+                <li>
+                    <Link to="/login">Login</Link>
+                </li>
+            </>
+        );
+    }
+
     return(
         <dir className={"header-bar"}>
             <ul className={"header-nav"}>
@@ -20,12 +46,7 @@ const Header = (props) =>{
                 </li>
             </ul>
             <ul className={"header-user"}>
-                <li>
-                    <Link to="/signup">Sign Up</Link>
-                </li>
-                <li>
-                    <Link to="/login">Login</Link>
-                </li>
+                {userSection()}
             </ul>
         </dir>
     );
