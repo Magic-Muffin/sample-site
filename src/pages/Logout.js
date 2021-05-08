@@ -6,7 +6,7 @@ const Logout = ({setter}) =>{
     useEffect(()=>{
         setter("");
         clearToken();
-    },[]);
+    },[setter]);
     
     return(
         <div>
