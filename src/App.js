@@ -16,8 +16,8 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Redirect
 } from "react-router-dom";
+import Logout from './pages/Logout';
 
 function App() {
   const [token, setToken] = useState(null);
@@ -51,9 +51,11 @@ function App() {
             <Signup/>
           </Route>
           <Route path="/login">
-            <Login/>
+            <Login setter={setToken}/>
           </Route>
-          <Redirect from='/logout' to="/" />
+          <Route path="/logout">
+            <Logout setter={setToken}></Logout>
+          </Route>
         </Switch>
       </Content>
       <Footer></Footer>

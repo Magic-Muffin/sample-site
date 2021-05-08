@@ -1,13 +1,18 @@
 import React, {useState} from "react";
+import { Redirect } from "react-router-dom";
+import { saveToken } from "../utils";
 
-const Login = (props) => {
+const Login = ({setter}) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [submitted, setSubmitted] = useState(false);
 
     const handleSubmit = (e)=>{
         e.preventDefault();
         console.log([email, password]);
-        localStorage.setItem("token", "123");
+        setSubmitted(true);
+        setter("123");
+        saveToken("123");
     }
 
     const handleChange = (e)=>{
@@ -24,13 +29,15 @@ const Login = (props) => {
         }
     }
 
+    if(submitted) return <Redirect to="/"></Redirect>
+
     return(
         <div>
             <h1>Login</h1>
-            <form>
-                <input className={"input-text"} type={"email"} onChange={handleChange} value={email}></input>
-                <input className={"input-text"} type={"password"} onChange={handleChange} value={password}></input>
-                <input className={"input-submit"} type={"submit"} onClick={handleSubmit} value="Submit"></input>
+            <form onSubmit={handleSubmit}>
+                <input className={"input-text"} type={"email"} onChange={handleChange} value={email} required></input>
+                <input className={"input-text"} type={"password"} onChange={handleChange} value={password} required></input>
+                <input className={"input-submit"} type={"submit"} value="Submit"></input>
             </form>
         </div>
     );

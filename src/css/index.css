@@ -17,3 +17,18 @@ code {
     monospace;
 }
 
+.input-text {
+  border-radius: 5px;
+}
+
+.input-submit {
+  border-radius: 5px;
+  background: blueviolet;
+  color: aliceblue;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+}

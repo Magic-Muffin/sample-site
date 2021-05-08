@@ -1,18 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {Link} from 'react-router-dom';
 import '../css/Header.css';
 
 const Header = ({loggedIn}) =>{
 
-    const logout =() => {
-        localStorage.setItem("token", "");
-    }
+    useEffect(()=>{
+
+    }, [loggedIn])
 
     const userSection = () =>{
         if(loggedIn){
             return(
                 <li>
-                    <Link to="/logout" onClick={logout}>Logout</Link>
+                    <Link to="/logout">Logout</Link>
                 </li>
             );
             
