@@ -27,7 +27,7 @@ function App() {
   },[token])
 
   const loggedIn = ()=>{
-    return token === "123";
+    return token !== "";
   }
 
   return (

@@ -1,7 +1,9 @@
 import axios from "axios";
 import React, {useState} from "react";
 import { Redirect } from "react-router-dom";
+import { BASE_URL } from "../config";
 import { saveToken } from "../utils";
+
 
 const Login = ({setter}) => {
     const [email, setEmail] = useState("");
@@ -11,8 +13,8 @@ const Login = ({setter}) => {
     const handleSubmit = (e)=>{
         e.preventDefault();
         console.log([email, password]);
-        axios.get(`http://localhost:3005/users`).then((response)=>{
-            if(response.status==200){
+        axios.get(`${BASE_URL}/users`).then((response)=>{
+            if(response.status===200){
                 let token = response.data.token;
                 setSubmitted(true);
                 setter(token);

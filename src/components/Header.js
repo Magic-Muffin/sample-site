@@ -5,7 +5,7 @@ import '../css/Header.css';
 const Header = ({loggedIn}) =>{
 
     useEffect(()=>{
-
+        
     }, [loggedIn])
 
     const userSection = () =>{
