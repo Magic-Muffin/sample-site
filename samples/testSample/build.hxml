@@ -1,6 +1,0 @@
--lib heaps
--cp src
--main Main
--D analyzer-optimize
--dce full
---js bin/SpinningSquare.js
