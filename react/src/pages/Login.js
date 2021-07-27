@@ -3,6 +3,7 @@ import React, {useState} from "react";
 import { Redirect } from "react-router-dom";
 import { BASE_URL } from "../config";
 import { saveToken } from "../utils";
+import {FaUser, FaKey} from 'react-icons/fa';
 
 
 const Login = ({setter}) => {
@@ -43,13 +44,20 @@ const Login = ({setter}) => {
     if(submitted) return <Redirect to="/"></Redirect>
 
     return(
-        <div>
+        <div className={"login-form"}>
             <h1>Login</h1>
             <form onSubmit={handleSubmit}>
-                <input className={"input-text"} type={"email"} onChange={handleChange} value={email} required></input>
-                <input className={"input-text"} type={"password"} onChange={handleChange} value={password} required></input>
-                <input className={"input-submit"} type={"submit"} value="Submit"></input>
+                <div>
+                    <FaUser/><input className={"input-text"} type={"email"} onChange={handleChange} value={email} required></input>
+                </div>
+                <div>
+                    <FaKey/><input className={"input-text"} type={"password"} onChange={handleChange} value={password} required></input>
+                </div>
+                <div>
+                    <input className={"input-submit"} type={"submit"} value="Login"></input>
+                </div>
             </form>
+            <span>Or</span>
         </div>
     );
 }
